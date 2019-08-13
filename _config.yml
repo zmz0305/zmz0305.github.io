@@ -79,6 +79,6 @@ theme: landscape
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: https://github.com/zmz0305/mzpalace
+  repo: https://github.com/zmz0305/zmz0305.github.io
   branch: published
   message: ""
