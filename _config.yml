@@ -80,5 +80,5 @@ theme: landscape
 deploy:
   type: git
   repo: https://github.com/zmz0305/zmz0305.github.io
-  branch: published
-  message: ""
+  branch: master
+  message: 
