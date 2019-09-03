@@ -6,7 +6,8 @@
 title: MZ's Palace
 subtitle:
 description: A * trapped in an engineer's body
-keywords: Software Engineering
+keywords:
+    - Engineering
 author: MZ
 language:
 timezone:
@@ -73,7 +74,7 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: landscape
+theme: Butterfly
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
@@ -81,4 +82,4 @@ deploy:
   type: git
   repo: https://github.com/zmz0305/zmz0305.github.io
   branch: master
-  message: 
+  message:
