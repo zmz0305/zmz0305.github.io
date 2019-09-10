@@ -54,8 +54,9 @@ code_word_wrap: false
 #   icon: link
 # ---------------
 social:
-  fa fa-github: https://github.com/zmz0305
-  fa fa-rss: /atom.xml
+  # fa fa-github: https://github.com/zmz0305
+  # fa fa-rss: /atom.xml
+  fa fa-instagram: https://www.instagram.com/zmz305/
 
 # Algolia search
 # ---------------
@@ -308,10 +309,10 @@ activate_power_mode:
 
 
 announcement:
-  content: 感謝訪問本站，若喜歡請收藏 ^_^
+  content: Welcome! Bookmark this page if you enjoyed it :)
 
 reward:
-  enable: true
+  enable: false
   QR_code:
     - itemlist:
         img: /img/wechat.jpg
@@ -335,7 +336,7 @@ canvas_ribbon:
 
 
 canvas_ribbon_piao:
-  enable: false
+  enable: true
 
 
 # 避免重複網址分散seo
