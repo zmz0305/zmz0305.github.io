@@ -7,7 +7,7 @@ tags:
     - async
 categories:
     - Dev_general
-cover: img/javascript.png
+cover: /img/javascript.png
 ---
 # Javascript - how to wait for several iframe to load
 A while ago, I had a testing situation that after a page is loaded, I need to wait for the 3 iframes inside the page to load before testing something else. After some google efforts, I find that iframe can attach a `load` event handler, and we can setup some callback on the `load` event to accomplish the wait.
