@@ -22,12 +22,37 @@
 <li>Create objects by a specific class commits you to a particular implementation instead of a particular interface.</li>
 <li>Can complicate future changes.</li>
 <li>To avoid it, create objects indirectly.</li>
-<li>Patterns to solve this problem<ul>
-<li>Abstract factory</li>
+<li>Patterns to solve this problem:<ul>
+<li>Abstract Factory</li>
 <li>Factory Method</li>
 <li>Prototype</li>
 </ul>
 </li>
+</ul>
+</li>
+<li>Dependence on specific operations.<ul>
+<li>By specifying a particular operation, you commit to one way of satisfying a request.</li>
+<li>Patterns to solve this problem:<ul>
+<li>Chain of Responsibility</li>
+<li>Command</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Dependency on hardware and software platform<ul>
+<li>APIs could be different on different platforms.</li>
+<li>Software that depend on one platform will be hard to port to other platforms</li>
+<li>May event hard to keep up with the native platform</li>
+<li>Should design the system to limit its platform dependencies.</li>
+<li>Patterns to solve this problem:<ul>
+<li>Abstract Factory</li>
+<li>Bridge</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Dependence on object representations or implementations<ul>
+<li>(To be continued)</li>
 </ul>
 </li>
 </ol>
