@@ -17,7 +17,7 @@
   runtime_unit: 'days'
 
   
-}</script></head><body><i class="fa fa-arrow-right" id="toggle-sidebar" aria-hidden="true"></i><div class="auto_open" id="sidebar"><div class="sidebar-toc"><div class="sidebar-toc__title">Catalog</div><div class="sidebar-toc__progress"><span class="progress-notice">You've read</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar"></div></div><div class="sidebar-toc__content"></div></div></div><div id="content-outer"><div id="top-container" style="background-image: url(https://cdn.jsdelivr.net/gh/jerryc127/CDN@latest/Photo/post.png)"><div id="page-header"><span class="pull-left"> <a class="blog_title" id="site-name" href="/">MZ's Palace</a></span><div class="open toggle-menu pull-right"><div class="menu-icon-first"></div><div class="menu-icon-second"></div><div class="menu-icon-third"></div></div><span class="pull-right menus"><div class="mobile_author_icon"><img class="lozad" src="/img/avatar.png" onerror="onerror=null;src='/img/friend_404.gif'"><div class="mobile_author-info__description">君当仗剑，大杀天下</div></div><hr><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> Home</span></a><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> Archives</span></a><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> Tags</span></a><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> Categories</span></a><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> Link</span></a><a class="site-page" href="/about/"><i class="fa-fw fa fa-heart"></i><span> About</span></a><script>document.body.addEventListener('touchstart', function(){ });</script></div></span><span class="pull-right"></span></div><div id="post-info"><div id="post-title"><div class="posttitle">Common causes of code rewrite/redesign and the patterns to address them</div></div><div id="post-meta"><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> Created 2019-09-15<span class="post-meta__separator">|</span><i class="fa fa-history" aria-hidden="true"></i> Updated 2019-09-15</time><span class="post-meta__separator mobile_hidden">|</span><span class="mobile_hidden"><i class="fa fa-inbox post-meta__icon" aria-hidden="true"></i><a class="post-meta__categories" href="/categories/Software-Engineering/">Software Engineering</a><i class="fa fa-angle-right" aria-hidden="true"></i><i class="fa fa-inbox post-meta__icon" aria-hidden="true"></i><a class="post-meta__categories" href="/categories/Software-Engineering/Design-Pattern-Notes/">Design Pattern Notes</a></span></div></div></div><div class="layout layout_post" id="content-inner"><article id="post"><div class="article-container" id="post-content"><ol>
+}</script></head><body><i class="fa fa-arrow-right" id="toggle-sidebar" aria-hidden="true"></i><div class="auto_open" id="sidebar"><div class="sidebar-toc"><div class="sidebar-toc__title">Catalog</div><div class="sidebar-toc__progress"><span class="progress-notice">You've read</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar"></div></div><div class="sidebar-toc__content"></div></div></div><div id="content-outer"><div id="top-container" style="background-image: url(https://cdn.jsdelivr.net/gh/jerryc127/CDN@latest/Photo/post.png)"><div id="page-header"><span class="pull-left"> <a class="blog_title" id="site-name" href="/">MZ's Palace</a></span><div class="open toggle-menu pull-right"><div class="menu-icon-first"></div><div class="menu-icon-second"></div><div class="menu-icon-third"></div></div><span class="pull-right menus"><div class="mobile_author_icon"><img class="lozad" src="/img/avatar.png" onerror="onerror=null;src='/img/friend_404.gif'"><div class="mobile_author-info__description">君当仗剑，大杀天下</div></div><hr><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> Home</span></a><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> Archives</span></a><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> Tags</span></a><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> Categories</span></a><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> Link</span></a><a class="site-page" href="/about/"><i class="fa-fw fa fa-heart"></i><span> About</span></a><script>document.body.addEventListener('touchstart', function(){ });</script></div></span><span class="pull-right"></span></div><div id="post-info"><div id="post-title"><div class="posttitle">Common causes of code rewrite/redesign and the patterns to address them</div></div><div id="post-meta"><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> Created 2019-09-15<span class="post-meta__separator">|</span><i class="fa fa-history" aria-hidden="true"></i> Updated 2019-09-16</time><span class="post-meta__separator mobile_hidden">|</span><span class="mobile_hidden"><i class="fa fa-inbox post-meta__icon" aria-hidden="true"></i><a class="post-meta__categories" href="/categories/Software-Engineering/">Software Engineering</a><i class="fa fa-angle-right" aria-hidden="true"></i><i class="fa fa-inbox post-meta__icon" aria-hidden="true"></i><a class="post-meta__categories" href="/categories/Software-Engineering/Design-Pattern-Notes/">Design Pattern Notes</a></span></div></div></div><div class="layout layout_post" id="content-inner"><article id="post"><div class="article-container" id="post-content"><ol>
 <li>Creating an object by specifying a class explicitly.<ul>
 <li>Create objects by a specific class commits you to a particular implementation instead of a particular interface.</li>
 <li>Can complicate future changes.</li>
@@ -52,7 +52,67 @@
 </ul>
 </li>
 <li>Dependence on object representations or implementations<ul>
-<li>(To be continued)</li>
+<li>Clients that depends on how object is represented, stored, located, or implemented might need to be changed when object changes.</li>
+<li>Patterns to solve this problem<ul>
+<li>Abstract Factory, Bridge, Memento, Proxy.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Algorithmic dependencies<ul>
+<li>Algorithms are often changed: extended, optimized, replaced etc.</li>
+<li>Algorithms that are likely to change should be isolated.</li>
+<li>Patterns to solve this problem<ul>
+<li>Builder, Iterator, Strategy, Template Method, Visitor</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Tight coupling<ul>
+<li>Classes that depend on each other are harder to reuse in isolation</li>
+<li>Tight coupling leads to monolithic systems<ul>
+<li>cannot change or remove a class without understanding and changing many other classes</li>
+</ul>
+</li>
+<li>Patterns to solve this problem<ul>
+<li>Abstract Factory</li>
+<li>Bridge</li>
+<li>Chain of Responsibility</li>
+<li>Command</li>
+<li>Facade</li>
+<li>Mediator</li>
+<li>Observer</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Extending functionality by subclassing<ul>
+<li>Customizing an object by subclassing is hard<ul>
+<li>new class has a fixed implementation overhead</li>
+<li>requires in-depth understanding of the parent class</li>
+<li>may lead to an explosion of classes</li>
+<li>try object composition and delegation instead, but could also be hard</li>
+</ul>
+</li>
+<li>Patterns to solve this problem<ul>
+<li>Bridge</li>
+<li>Chain of Responsibility</li>
+<li>Composite</li>
+<li>Decorator</li>
+<li>Observer</li>
+<li>Strategy</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Inability to alter classes conveniently<ul>
+<li>Have to modify a class that can’t be modified conveniently.</li>
+<li>Need source code but don’t have it (commercial class library?)</li>
+<li>Would require changing lots of existing subclasses.</li>
+<li>Patterns to solve this problem<ul>
+<li>Adapter, Decorator, Visitor</li>
+</ul>
+</li>
 </ul>
 </li>
 </ol>
